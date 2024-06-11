@@ -1,0 +1,20 @@
+<header>
+    <h1>Lista de Productos</h1>
+    <div id="IdentificadorUser">
+        <h3 id="h3Products">Bienvenido {{user.firstName}} {{user.lastName}}!</h3>
+    </div>
+</header>
+<div id="container-items">
+    {{#each products}}
+    <div id="item">
+        <div id="nameAndDescrip">
+            <h4>{{this.nombre}}</h4>
+            <p id="description">{{this.descripcion}}</p>
+        </div>
+        <div id="priceAndBtn">
+            <p id="price">${{this.precio}}</p>
+            <button id="btnCart">agregar al carrito</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
